@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Compatibilité Matériaux pour l&#x27;Impression 3D | Le Cœur de Votre Innovation</title>
+    <meta name="description" content="Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d">
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --primary-color: #004d40;
+            --secondary-color: #00796b;
+            --accent-color: #ff9800;
+            --text-color: #333;
+            --light-text-color: #555;
+            --border-color: #ccc;
+            --card-bg: #fff;
+            --font-family-display: 'Montserrat', sans-serif;
+            --font-family-body: 'Roboto', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: var(--font-family-body);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(45deg);
+        }
+
+        h1 {
+            font-family: var(--font-family-display);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        h2 {
+            font-family: var(--font-family-display);
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-family: var(--font-family-display);
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            margin-top: 25px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--light-text-color);
+            font-size: 0.95em;
+        }
+
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        form input[type="number"]:focus,
+        form select:focus,
+        form textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        form button {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: auto;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        form button:hover {
+            background-color: #e68900;
+            transform: translateY(-2px);
+        }
+
+        .tool-result {
+            background-color: #f9f9f9;
+            border: 1px dashed var(--secondary-color);
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+            min-height: 100px;
+        }
+
+        .tool-result h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #e0f2f1;
+            border-left: 3px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .result-item strong {
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .seo-section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .seo-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .seo-section p {
+            color: var(--light-text-color);
+            margin-bottom: 15px;
+        }
+
+        .seo-section ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: var(--light-text-color);
+        }
+
+        .seo-section li {
+            margin-bottom: 8px;
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a.onrender.com">
+    <meta property="og:title" content="Analyseur de Compatibilité Matériaux pour l&#x27;Impression 3D">
+    <meta property="og:description" content="Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d">
+    <meta property="og:url" content="https://analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Analyseur de Compatibilité Matériaux pour l'Impression 3D", "description": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d", "url": "https://analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a" data-runtime-mode="profile_generator">
+    <header>
+        <h1>Analyseur de Compatibilité Matériaux pour l'Impression 3D</h1>
+        <p>Optimisez vos projets d'impression 3D avec précision. Notre outil d'aide à la décision identifie les combinaisons de matériaux idéales basées sur des propriétés mécaniques, thermiques et chimiques exigeantes.</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Le Cœur de Votre Innovation</h2>
+            <p>Conçu pour les professionnels et les hobbyistes avancés, cet analyseur va au-delà des sélections basiques. Entrez vos critères spécifiques et découvrez des recommandations de matériaux qui répondent précisément aux contraintes de votre application.</p>
+            <form id="tool-form">
+                <h3>Critères de Performance Requis</h3>
+                <label for="resistance-mecanique">Résistance Mécanique (N/mm² ou MPa) :</label>
+                <input type="number" id="resistance-mecanique" name="resistance-mecanique" min="0" step="0.1" placeholder="Ex: 50" required>
+
+                <label for="temperature-utilisation">Température d'Utilisation Maximale (°C) :</label>
+                <input type="number" id="temperature-utilisation" name="temperature-utilisation" min="0" step="1" placeholder="Ex: 80" required>
+
+                <label for="resistance-chimique">Résistance Chimique :</label>
+                <select id="resistance-chimique" name="resistance-chimique" required>
+                    <option value="">Sélectionnez un niveau</option>
+                    <option value="faible">Faible (Eau, Air)</option>
+                    <option value="moyenne">Moyenne (Huiles, Graisses)</option>
+                    <option value="elevée">Élevée (Solvants, Acides)</option>
+                </select>
+
+                <label for="flexibilite">Flexibilité / Rigidité :</label>
+                <select id="flexibilite" name="flexibilite" required>
+                    <option value="">Sélectionnez un type</option>
+                    <option value="rigide">Rigide (Pièces structurelles)</option>
+                    <option value="semi-flexible">Semi-flexible (Connecteurs, joints)</option>
+                    <option value="flexible">Flexible (Amortisseurs, poignées)</option>
+                </select>
+
+                <label for="resistance-uv">Résistance aux UV :</label>
+                <select id="resistance-uv" name="resistance-uv" required>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+
+                <label for="finition-surface">Finition de Surface Souhaitée :</label>
+                <select id="finition-surface" name="finition-surface" required>
+                    <option value="">Sélectionnez une option</option>
+                    <option value="lisse">Lisse (Esthétique, faible friction)</option>
+                    <option value="matte">Matte (Réduction de reflets)</option>
+                    <option value="rugueuse">Rugueuse (Adhérence)</option>
+                </select>
+
+                <button type="submit" id="tool-submit" data-affiliate-slot="material-analysis-submit">Analyser les Matériaux</button>
+            </form>
+
+            <div id="tool-result" class="tool-result">
+                <h3 id="result-headline">Résultats de la Compatibilité :</h3>
+                <p>Vos recommandations apparaîtront ici après l'analyse.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pourquoi la bonne combinaison est cruciale ?</h2>
+            <p>Chaque projet d'impression 3D est unique et les performances finales de votre pièce dépendent intrinsèquement du choix des matériaux. Une sélection inappropriée peut entraîner des défaillances structurelles, une dégradation prématurée, ou simplement ne pas atteindre les objectifs fonctionnels.</p>
+            <p>Notre analyseur vous aide à éviter ces écueils en proposant des matériaux validés pour des applications spécifiques, vous permettant ainsi d'économiser temps et ressources.</p>
+        </section>
+
+        <section>
+            <h2>Méthodologie d'Analyse</h2>
+            <p>Notre algorithme propriétaire croise vos exigences avec une base de données exhaustive de propriétés de filaments :</p>
+            <ul>
+                <li><strong>Mécanique :</strong> Résistance à la traction, à la compression, module d'élasticité, dureté.</li>
+                <li><strong>Thermique :</strong> Température de déflexion sous charge, température de transition vitreuse, résistance à la chaleur.</li>
+                <li><strong>Chimique :</strong> Réaction aux solvants, acides, bases, UV, et humidité.</li>
+                <li><strong>Esthétique & Fonctionnel :</strong> Fini de surface, flexibilité, densité, transparence.</li>
+            </ul>
+            <p>Nous ne nous contentons pas de lister, nous vous guidons vers les options les plus pertinentes pour une réussite garantie de vos impressions.</p>
+        </section>
+    </div>
+
+    <footer class="seo-section">
+        <h2>Optimisez vos Impressions 3D : Guide Complet</h2>
+        <p>L'impression 3D révolutionne la production de prototypes et de pièces fonctionnelles. Pour les ingénieurs, designers et makers en France, choisir le bon filament est essentiel. Notre outil d'aide à la décision est conçu pour simplifier cette tâche complexe.</p>
+        <p>Découvrez comment notre <strong>analyseur de compatibilité matériaux pour l'impression 3D</strong> peut vous aider à :</p>
+        <ul>
+            <li><strong>Sélectionner le meilleur filament 3D</strong> : ABS, PLA, PETG, Nylon, ASA, PC, TPU, PEEK, Ultem... quel est le plus adapté à vos besoins spécifiques ?</li>
+            <li><strong>Optimiser les propriétés mécaniques</strong> : Trouvez des matériaux offrant une haute résistance à la traction, une bonne élasticité ou une excellente rigidité pour vos pièces industrielles ou vos prototypes robustes.</li>
+            <li><strong>Gérer les contraintes thermiques et chimiques</strong> : Identifiez les polymères capables de résister à des températures élevées ou à l'exposition à des agents chimiques corrosifs.</li>
+            <li><strong>Améliorer la durabilité de vos créations</strong> : Choisissez des matériaux résistants aux UV pour les applications extérieures ou des filaments pour des pièces soumises à une forte abrasion.</li>
+            <li><strong>Prendre des décisions éclairées</strong> : Fini les tâtonnements, notre solution offre une approche scientifique pour la <strong>sélection de matériaux d'impression 3D</strong>.</li>
+        </ul>
+        <p>Que vous recherchiez une <strong>imprimante 3D professionnelle</strong> ou des conseils pour vos projets personnels, comprendre la science des matériaux est un atout majeur. Notre interface intuitive fournit des <strong>recommandations de matériaux pour l'impression 3D</strong> précises, vous permettant de passer de l'idée à la réalité avec confiance. Explorez les possibilités infinies de l'impression 3D avec les bons matériaux !</p>
+        <p>&copy; 2023 Analyseur 3D. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const resistanceMecanique = parseFloat(document.getElementById('resistance-mecanique').value);
+            const temperatureUtilisation = parseFloat(document.getElementById('temperature-utilisation').value);
+            const resistanceChimique = document.getElementById('resistance-chimique').value;
+            const flexibilite = document.getElementById('flexibilite').value;
+            const resistanceUV = document.getElementById('resistance-uv').value;
+            const finitionSurface = document.getElementById('finition-surface').value;
+
+            const materials = [
+                {
+                    name: "PLA (Acide Polylactique)",
+                    properties: {
+                        resistanceMecanique: 60, // MPa
+                        temperatureUtilisation: 60, // °C
+                        resistanceChimique: "faible",
+                        flexibilite: "rigide",
+                        resistanceUV: "non",
+                        finitionSurface: "lisse"
+                    },
+                    description: "Facile à imprimer, idéal pour les prototypes et pièces esthétiques sans contraintes extrêmes."
+                },
+                {
+                    name: "ABS (Acrylonitrile Butadiène Styrène)",
+                    properties: {
+                        resistanceMecanique: 80,
+                        temperatureUtilisation: 90,
+                        resistanceChimique: "moyenne",
+                        flexibilite: "rigide",
+                        resistanceUV: "non",
+                        finitionSurface: "matte"
+                    },
+                    description: "Bonne résistance aux chocs et à la chaleur. Nécessite une enceinte chauffée pour l'impression."
+                },
+                {
+                    name: "PETG (Polyéthylène Téréphtalate Glycolisé)",
+                    properties: {
+                        resistanceMecanique: 70,
+                        temperatureUtilisation: 75,
+                        resistanceChimique: "moyenne",
+                        flexibilite: "rigide",
+                        resistanceUV: "oui",
+                        finitionSurface: "lisse"
+                    },
+                    description: "Combinaison de la facilité du PLA et de la robustesse de l'ABS, avec une bonne résistance aux UV."
+                },
+                {
+                    name: "Nylon (Polyamide)",
+                    properties: {
+                        resistanceMecanique: 90,
+                        temperatureUtilisation: 120,
+                        resistanceChimique: "élevée",
+                        flexibilite: "semi-flexible",
+                        resistanceUV: "moyenne",
+                        finitionSurface: "rugueuse"
+                    },
+                    description: "Haute résistance à l'usure, aux chocs et à la chaleur. Souvent utilisé pour des pièces fonctionnelles, engrenages."
+                },
+                {
+                    name: "ASA (Acrylonitrile Styrène Acrylate)",
+                    properties: {
+                        resistanceMecanique: 75,
+                        temperatureUtilisation: 100,
+                        resistanceChimique: "moyenne",
+                        flexibilite: "rigide",
+                        resistanceUV: "oui",
+                        finitionSurface: "matte"
+                    },
+                    description: "Alternative à l'ABS avec une excellente résistance aux UV et aux intempéries, idéal pour l'extérieur."
+                },
+                {
+                    name: "PC (Polycarbonate)",
+                    properties: {
+                        resistanceMecanique: 110,
+                        temperatureUtilisation: 130,
+                        resistanceChimique: "moyenne",
+                        flexibilite: "rigide",
+                        resistanceUV: "oui",
+                        finitionSurface: "lisse"
+                    },
+                    description: "Extrêmement robuste et résistant à la chaleur, mais difficile à imprimer."
+                },
+                {
+                    name: "TPU (Polyuréthane Thermoplastique)",
+                    properties: {
+                        resistanceMecanique: 40,
+                        temperatureUtilisation: 60,
+                        resistanceChimique: "moyenne",
+                        flexibilite: "flexible",
+                        resistanceUV: "moyenne",
+                        finitionSurface: "rugueuse"
+                    },
+                    description: "Matériau élastique et flexible, parfait pour des joints, des coques de protection ou des amortisseurs."
+                },
+                {
+                    name: "PEEK (Polyétheréthercétone)",
+                    properties: {
+                        resistanceMecanique: 100,
+                        temperatureUtilisation: 250,
+                        resistanceChimique: "élevée",
+                        flexibilite: "rigide",
+                        resistanceUV: "oui",
+                        finitionSurface: "lisse"
+                    },
+                    description: "Polymère haute performance, excellent pour des applications industrielles extrêmes (chaleur, chimie)."
+                }
+            ];
+
+            const results = [];
+
+            materials.forEach(material => {
+                let score = 0;
+                let reasons = [];
+
+                // Résistance Mécanique
+                if (material.properties.resistanceMecanique >= resistanceMecanique) {
+                    score += 1;
+                    reasons.push("Résistance mécanique adéquate.");
+                }
+
+                // Température d'Utilisation
+                if (material.properties.temperatureUtilisation >= temperatureUtilisation) {
+                    score += 1;
+                    reasons.push("Température d'utilisation supportée.");
+                }
+
+                // Résistance Chimique
+                const chemicalMap = {"faible": 1, "moyenne": 2, "élevée": 3};
+                if (chemicalMap[material.properties.resistanceChimique] >= chemicalMap[resistanceChimique]) {
+                    score += 1;
+                    reasons.push("Résistance chimique conforme.");
+                }
+
+                // Flexibilité
+                if (material.properties.flexibilite === flexibilite) {
+                    score += 1;
+                    reasons.push("Flexibilité correspondante.");
+                }
+
+                // Résistance UV
+                if (resistanceUV === "oui" && material.properties.resistanceUV === "oui") {
+                    score += 1;
+                    reasons.push("Résistance aux UV assurée.");
+                } else if (resistanceUV === "non") { // If UV resistance is not required, it doesn't penalize
+                    score += 1; // It can still be a good choice
+                    reasons.push("Résistance aux UV non requise ou compatible.");
+                }
+
+                // Fini de surface
+                if (material.properties.finitionSurface === finitionSurface) {
+                    score += 1;
+                    reasons.push("Finition de surface idéale.");
+                }
+
+                if (score >= 4) { // Threshold for a good match
+                    results.push({
+                        material: material.name,
+                        score: score,
+                        reasons: reasons,
+                        description: material.description
+                    });
+                }
+            });
+
+            results.sort((a, b) => b.score - a.score); // Sort by highest score first
+
+            const resultDiv = document.getElementById('tool-result');
+            resultDiv.innerHTML = '<h3>Résultats de la Compatibilité :</h3>';
+
+            if (results.length > 0) {
+                results.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'result-item';
+                    div.innerHTML = `<strong>${item.material}</strong> (Score: ${item.score}/6)<br>${item.description}<br><em>Points forts :</em> ${item.reasons.join(', ')}.`;
+                    resultDiv.appendChild(div);
+                });
+            } else {
+                resultDiv.innerHTML += '<p>Aucun matériau parfaitement compatible trouvé avec ces critères. Essayez d\'ajuster vos exigences.</p>';
+            }
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.setAttribute("rel", "nofollow sponsored noopener noreferrer");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank", "noopener");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (tag === "select") {
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      field.value = sampleNumber(field);
+      return;
+    }
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    form.querySelectorAll("input, select, textarea").forEach(applySample);
+    const blocker = function (event) {
+      event.preventDefault();
+    };
+    form.addEventListener("submit", blocker, { capture: true, once: true });
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+    inspectResult(before, 6);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
