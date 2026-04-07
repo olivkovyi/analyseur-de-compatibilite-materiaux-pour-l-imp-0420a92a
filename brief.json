@@ -1,5 +1,5 @@
 {
-  "run_id": "run-1775523424228",
+  "run_id": "run-1775554407464",
   "job_index": 1,
   "params": {
     "owner_user_id": "user-1774822953462",
@@ -7,15 +7,15 @@
     "owner_display_name": "Administrator",
     "count": 1,
     "archetype": "tool",
-    "market": "Growth republish",
+    "market": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fon…",
     "language": "fr",
     "country": "FR",
     "brief": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d",
     "notes": "Growth module republish of an updated local artifact.",
     "import_notes": "Growth module republish of an updated local artifact.",
-    "growth_job_id": "growth-1775523363859",
+    "growth_job_id": "growth-1775554111171",
     "growth_slug": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
-    "growth_kind": "affiliate",
+    "growth_kind": "content",
     "mode": "production",
     "run_kind": "import_deploy",
     "publish_target": "render",
@@ -39,8 +39,8 @@
     "forced_slug": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
     "site_idea_title": "Analyseur de Compatibilité Matériaux pour l'Impression 3D",
     "site_idea_summary": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d",
-    "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
-    "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+    "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775554111171/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+    "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775554111171/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
     "import_analysis_model": "preserved-analysis"
   },
   "import_analysis": {
@@ -51,7 +51,7 @@
     "archetype": "tool",
     "language": "fr",
     "country": "FR",
-    "market": "Growth republish",
+    "market": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fon…",
     "characteristics": [
       "imported static site",
       "ready file deploy",
@@ -59,6 +59,6 @@
     ],
     "suggested_slug": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a"
   },
-  "source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
-  "deploy_root": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a"
+  "source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775554111171/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+  "deploy_root": "/var/lib/utility-site-studio/data/growth-republish/growth-1775554111171/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a"
 }
