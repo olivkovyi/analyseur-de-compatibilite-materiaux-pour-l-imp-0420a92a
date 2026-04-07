@@ -11,17 +11,17 @@
   "country": "FR",
   "url": null,
   "expected_url": "https://analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a.onrender.com",
-  "created": "2026-04-07T00:57:04.785829+00:00",
+  "created": "2026-04-07T09:33:38.196473+00:00",
   "owner_user_id": "user-1774822953462",
   "owner_username": "admin",
   "owner_display_name": "Administrator",
   "status": "generated",
-  "run_id": "run-1775523424228",
+  "run_id": "run-1775554407464",
   "publish_target": "render",
   "mode": "production",
   "source_type": "imported",
-  "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
-  "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+  "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775554111171/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+  "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775554111171/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
   "import_resolution_note": null,
   "analysis": {
     "model": "preserved-analysis",
@@ -64,6 +64,42 @@
         "summary": "A safer anchor-text fallback was applied as a compact contextual block near the bottom of the page.",
         "issues": []
       }
+    },
+    "content": {
+      "status": "ready",
+      "updated_at": "2026-04-07T09:32:57.230382+00:00",
+      "article_count": 2,
+      "anchor_article_count": 0,
+      "plain_url_article_count": 2,
+      "batch_anchor_article_count": 2,
+      "batch_plain_url_article_count": 8,
+      "total_batch_articles": 10,
+      "links": 1,
+      "anchor_keywords": [
+        "roobet casino",
+        "roobet"
+      ],
+      "section_title": "Ressources complémentaires",
+      "pages": [
+        {
+          "slug": "analyseur-de-compatibilite-materiaux-pour-l-imp-37fded4f",
+          "path": "/var/lib/utility-site-studio/sites/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/insights/analyseur-de-compatibilite-materiaux-pour-l-imp-37fded4f.html",
+          "title": "Analyseur de Compatibilité Matériaux pour l'Impression 3D — Guide 1",
+          "link_mode": "plain_url_text"
+        },
+        {
+          "slug": "analyseur-de-compatibilite-materiaux-pour-l-imp-68646621",
+          "path": "/var/lib/utility-site-studio/sites/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/insights/analyseur-de-compatibilite-materiaux-pour-l-imp-68646621.html",
+          "title": "Analyseur de Compatibilité Matériaux pour l'Impression 3D — Guide 2",
+          "link_mode": "plain_url_text"
+        }
+      ],
+      "review": {
+        "status": "pass",
+        "score": 82,
+        "summary": "A safer fallback content bundle was applied with clean supporting pages and a restrained homepage knowledge section.",
+        "issues": []
+      }
     }
   },
   "ahrefs": {
@@ -104,7 +140,7 @@
       "status": "published",
       "repo_name": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
       "repo_url": "https://github.com/olivkovyi/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
-      "updated_at": 1775071422
+      "updated_at": 1775523448
     },
     "deployment": {
       "status": "ready",
@@ -112,16 +148,16 @@
       "service_id": "srv-d76n248gjchc73bthp70",
       "project_name": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
       "requested_project_name": null,
-      "deployment_id": "dep-d76n24ogjchc73bthpn0",
+      "deployment_id": "dep-d7a5dn8gjchc739ug15g",
       "deployment_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
       "public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
       "expected_public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
       "dashboard_url": "https://dashboard.render.com/static/srv-d76n248gjchc73bthp70",
       "ready_state": "live",
       "target": "production",
-      "updated_at": 1775071452,
-      "url_source": "alias",
-      "requested_public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com"
+      "updated_at": 1775523488,
+      "requested_public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+      "url_source": "alias"
     },
     "qa": {
       "status": "pass",
@@ -194,38 +230,38 @@
             "detail": "Editorial desktop layout avoids negative overlap offsets on the tool panel"
           }
         ],
-        "checked_at": 1775523384
+        "checked_at": 1775554378
       },
       "functional": {
         "status": "pass",
         "detail": "desktop: Le formulaire natif a mis a jour la zone de resultat. | mobile: Le formulaire natif a mis a jour la zone de resultat.",
-        "target_url": "http://127.0.0.1:42889/index.html?__qa=functional",
+        "target_url": "http://127.0.0.1:35411/index.html?__qa=functional",
         "mode": "native-form",
         "headline": "Résultats de la Compatibilité :",
         "primary_url": "",
         "desktop": {
           "status": "pass",
           "detail": "Le formulaire natif a mis a jour la zone de resultat.",
-          "target_url": "http://127.0.0.1:42889/index.html?__qa=functional",
+          "target_url": "http://127.0.0.1:35411/index.html?__qa=functional",
           "viewport": "desktop",
           "mode": "native-form",
           "headline": "Résultats de la Compatibilité :",
           "primary_url": "",
           "reported_viewport": "desktop",
-          "updated_at": 1775523385
+          "updated_at": 1775554378
         },
         "mobile": {
           "status": "pass",
           "detail": "Le formulaire natif a mis a jour la zone de resultat.",
-          "target_url": "http://127.0.0.1:42889/index.html?__qa=functional",
+          "target_url": "http://127.0.0.1:35411/index.html?__qa=functional",
           "viewport": "mobile",
           "mode": "native-form",
           "headline": "Résultats de la Compatibilité :",
           "primary_url": "",
           "reported_viewport": "mobile",
-          "updated_at": 1775523386
+          "updated_at": 1775554379
         },
-        "updated_at": 1775523386
+        "updated_at": 1775554379
       },
       "remote": {
         "status": "pass",
@@ -246,7 +282,7 @@
             "detail": "Remote HTML contains a body tag"
           }
         ],
-        "checked_at": 1775523386
+        "checked_at": 1775554380
       },
       "visual": {
         "status": "pass",
@@ -262,21 +298,21 @@
           "detail": "430x932 screenshot captured.",
           "relative_url": "/static/generated-qa/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-mobile.png"
         },
-        "updated_at": 1775523389
+        "updated_at": 1775554382
       },
       "lighthouse": {
         "status": "pass",
         "scores": {
-          "performance": 90,
-          "accessibility": 93,
+          "performance": 100,
+          "accessibility": 94,
           "best-practices": 96,
           "seo": 100
         },
         "report_path": "/var/lib/utility-site-studio/data/qa/lighthouse/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-lighthouse.json",
-        "updated_at": 1775523415
+        "updated_at": 1775554402
       },
       "qa_live_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
-      "updated_at": "2026-04-07T00:56:55.948679+00:00"
+      "updated_at": "2026-04-07T09:33:22.258947+00:00"
     }
   }
 }
