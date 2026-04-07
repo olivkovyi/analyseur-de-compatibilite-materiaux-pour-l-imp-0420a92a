@@ -1,23 +1,38 @@
 {
+  "slug": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
   "name": "Analyseur de Compatibilité Matériaux pour l'Impression 3D",
   "description": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d",
   "theme": "tool",
-  "design_theme": "aperture-lab",
-  "structure_preset": "metric-grid",
-  "render_direction": "signal-bento",
-  "page_blueprint": "briefing-board",
+  "design_theme": "imported-source",
+  "structure_preset": "external-source",
+  "render_direction": "imported-source",
+  "page_blueprint": "imported-source",
   "language": "fr",
   "country": "FR",
   "url": null,
   "expected_url": "https://analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a.onrender.com",
-  "created": "2026-04-01T19:23:21.667354+00:00",
+  "created": "2026-04-07T00:57:04.785829+00:00",
   "owner_user_id": "user-1774822953462",
   "owner_username": "admin",
   "owner_display_name": "Administrator",
   "status": "generated",
-  "run_id": "run-1775071365445",
+  "run_id": "run-1775523424228",
   "publish_target": "render",
   "mode": "production",
+  "source_type": "imported",
+  "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+  "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1775523363859/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+  "import_resolution_note": null,
+  "analysis": {
+    "model": "preserved-analysis",
+    "summary": "Déterminez la meilleure combinaison de matériaux pour vos impressions 3D en fonction de propriétés mécaniques, thermiques et chimiques avec notre outil d",
+    "notes": "Growth module republish of an updated local artifact.",
+    "characteristics": [
+      "imported static site",
+      "ready file deploy",
+      "tool"
+    ]
+  },
   "github": {
     "status": "pending"
   },
@@ -28,13 +43,240 @@
     "status": "pending"
   },
   "features": [
-    "Hero pattern: command",
-    "Proof module: metrics",
-    "Design theme: Aperture Lab",
-    "Render direction: Signal Bento",
-    "Page blueprint: Briefing Board",
-    "Runtime mode: profile_generator",
-    "Generation mode: direct_html",
-    "Artifact rendered, awaiting QA and deployment"
-  ]
+    "Imported from ready static files",
+    "AI analysis model: preserved-analysis",
+    "imported static site",
+    "ready file deploy",
+    "tool"
+  ],
+  "growth": {
+    "affiliate": {
+      "status": "ready",
+      "updated_at": "2026-04-07T00:56:16.945234+00:00",
+      "modes": [
+        "anchor_text"
+      ],
+      "links": 1,
+      "insertions": 1,
+      "review": {
+        "status": "pass",
+        "score": 84,
+        "summary": "A safer anchor-text fallback was applied as a compact contextual block near the bottom of the page.",
+        "issues": []
+      }
+    }
+  },
+  "ahrefs": {
+    "status": "ready",
+    "synced_at": "2026-04-05T22:58:28.102497+00:00",
+    "country": "FR",
+    "target_url": "https://analyseur-de-compatibilite-materiaux.onrender.com/",
+    "target_host": "analyseur-de-compatibilite-materiaux.onrender.com",
+    "current_live_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+    "domain_rating": 89.0,
+    "ahrefs_rank": 2204,
+    "backlinks": 0,
+    "refdomains": 0,
+    "org_traffic": 0,
+    "org_keywords": 0,
+    "org_keywords_1_3": 0,
+    "org_keywords_4_10": 0,
+    "org_keywords_11_20": 0,
+    "org_keywords_21_50": 0,
+    "org_keywords_51_plus": 0,
+    "top_country": null,
+    "top_country_traffic": null,
+    "detail": "Ahrefs metrics synced via Batch Analysis.",
+    "shared_host": true,
+    "metrics_scope": "shared-host",
+    "shared_host_provider": "Render",
+    "shared_host_note": "Сайт живёт на Render shared host (analyseur-de-compatibilite-materiaux.onrender.com). DR и Ahrefs Rank в таком режиме частично отражают силу хост-домена, поэтому смотри в первую очередь на keywords, ref domains, traffic и top pages.",
+    "opportunity_score": 0,
+    "opportunity_band": "dormant",
+    "opportunity_label": "Dormant",
+    "opportunity_detail": "Ahrefs пока почти не видит самостоятельных SEO-сигналов у этого проекта. · shared-host: DR/AR смотри осторожно."
+  },
+  "previous_live_state": {
+    "url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+    "expected_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+    "requested_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+    "github": {
+      "status": "published",
+      "repo_name": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+      "repo_url": "https://github.com/olivkovyi/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+      "updated_at": 1775071422
+    },
+    "deployment": {
+      "status": "ready",
+      "provider": "render",
+      "service_id": "srv-d76n248gjchc73bthp70",
+      "project_name": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
+      "requested_project_name": null,
+      "deployment_id": "dep-d76n24ogjchc73bthpn0",
+      "deployment_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+      "public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+      "expected_public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+      "dashboard_url": "https://dashboard.render.com/static/srv-d76n248gjchc73bthp70",
+      "ready_state": "live",
+      "target": "production",
+      "updated_at": 1775071452,
+      "url_source": "alias",
+      "requested_public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com"
+    },
+    "qa": {
+      "status": "pass",
+      "local": {
+        "status": "pass",
+        "checks": [
+          {
+            "name": "index_exists",
+            "status": "pass",
+            "detail": "index.html exists"
+          },
+          {
+            "name": "meta_exists",
+            "status": "pass",
+            "detail": "meta.json exists"
+          },
+          {
+            "name": "robots_exists",
+            "status": "pass",
+            "detail": "robots.txt exists"
+          },
+          {
+            "name": "has_title",
+            "status": "pass",
+            "detail": "HTML contains a title tag"
+          },
+          {
+            "name": "has_viewport",
+            "status": "pass",
+            "detail": "HTML contains a mobile viewport meta tag"
+          },
+          {
+            "name": "has_canonical",
+            "status": "pass",
+            "detail": "HTML contains a canonical URL"
+          },
+          {
+            "name": "bundle_size",
+            "status": "pass",
+            "detail": "Generated HTML stays below 250KB"
+          },
+          {
+            "name": "functional_qa_hook",
+            "status": "pass",
+            "detail": "Generated HTML includes the browser QA hook used before deploy."
+          },
+          {
+            "name": "inline_script_syntax",
+            "status": "pass",
+            "detail": "Inline JavaScript syntax check passed."
+          },
+          {
+            "name": "robots_google_only",
+            "status": "pass",
+            "detail": "robots.txt allows only Google crawlers and blocks all other bots."
+          },
+          {
+            "name": "no_meta_noindex",
+            "status": "pass",
+            "detail": "Generated HTML does not inject a noindex robots meta tag."
+          },
+          {
+            "name": "no_internal_branding",
+            "status": "pass",
+            "detail": "Generated site does not leak internal platform branding or internal product naming."
+          },
+          {
+            "name": "desktop_layout_overlap",
+            "status": "pass",
+            "detail": "Editorial desktop layout avoids negative overlap offsets on the tool panel"
+          }
+        ],
+        "checked_at": 1775523384
+      },
+      "functional": {
+        "status": "pass",
+        "detail": "desktop: Le formulaire natif a mis a jour la zone de resultat. | mobile: Le formulaire natif a mis a jour la zone de resultat.",
+        "target_url": "http://127.0.0.1:42889/index.html?__qa=functional",
+        "mode": "native-form",
+        "headline": "Résultats de la Compatibilité :",
+        "primary_url": "",
+        "desktop": {
+          "status": "pass",
+          "detail": "Le formulaire natif a mis a jour la zone de resultat.",
+          "target_url": "http://127.0.0.1:42889/index.html?__qa=functional",
+          "viewport": "desktop",
+          "mode": "native-form",
+          "headline": "Résultats de la Compatibilité :",
+          "primary_url": "",
+          "reported_viewport": "desktop",
+          "updated_at": 1775523385
+        },
+        "mobile": {
+          "status": "pass",
+          "detail": "Le formulaire natif a mis a jour la zone de resultat.",
+          "target_url": "http://127.0.0.1:42889/index.html?__qa=functional",
+          "viewport": "mobile",
+          "mode": "native-form",
+          "headline": "Résultats de la Compatibilité :",
+          "primary_url": "",
+          "reported_viewport": "mobile",
+          "updated_at": 1775523386
+        },
+        "updated_at": 1775523386
+      },
+      "remote": {
+        "status": "pass",
+        "checks": [
+          {
+            "name": "remote_200",
+            "status": "pass",
+            "detail": "Remote deployment returned HTTP 200"
+          },
+          {
+            "name": "remote_title",
+            "status": "pass",
+            "detail": "Remote HTML contains a title tag"
+          },
+          {
+            "name": "remote_body",
+            "status": "pass",
+            "detail": "Remote HTML contains a body tag"
+          }
+        ],
+        "checked_at": 1775523386
+      },
+      "visual": {
+        "status": "pass",
+        "desktop": {
+          "status": "pass",
+          "path": "/var/lib/utility-site-studio/static/generated-qa/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-desktop.png",
+          "detail": "1440x960 screenshot captured.",
+          "relative_url": "/static/generated-qa/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-desktop.png"
+        },
+        "mobile": {
+          "status": "pass",
+          "path": "/var/lib/utility-site-studio/static/generated-qa/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-mobile.png",
+          "detail": "430x932 screenshot captured.",
+          "relative_url": "/static/generated-qa/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-mobile.png"
+        },
+        "updated_at": 1775523389
+      },
+      "lighthouse": {
+        "status": "pass",
+        "scores": {
+          "performance": 90,
+          "accessibility": 93,
+          "best-practices": 96,
+          "seo": 100
+        },
+        "report_path": "/var/lib/utility-site-studio/data/qa/lighthouse/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a-lighthouse.json",
+        "updated_at": 1775523415
+      },
+      "qa_live_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
+      "updated_at": "2026-04-07T00:56:55.948679+00:00"
+    }
+  }
 }
