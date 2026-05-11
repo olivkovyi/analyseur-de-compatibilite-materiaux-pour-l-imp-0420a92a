@@ -37,7 +37,7 @@
     "status": "published",
     "repo_name": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
     "repo_url": "https://github.com/olivkovyi/analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
-    "updated_at": 1778528410
+    "updated_at": 1778528713
   },
   "deployment": {
     "status": "ready",
@@ -45,14 +45,14 @@
     "service_id": "srv-d76n248gjchc73bthp70",
     "project_name": "analyseur-de-compatibilite-materiaux-pour-l-imp-0420a92a",
     "requested_project_name": null,
-    "deployment_id": "dep-d813228g4nts739511i0",
+    "deployment_id": "dep-d8134drbc2fs738lksl0",
     "deployment_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
     "public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
     "expected_public_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
     "dashboard_url": "https://dashboard.render.com/static/srv-d76n248gjchc73bthp70",
     "ready_state": "live",
     "target": "production",
-    "updated_at": 1778528424
+    "updated_at": 1778528732
   },
   "qa": {
     "status": "pass",
@@ -300,6 +300,6 @@
     "opportunity_detail": "Ahrefs пока почти не видит самостоятельных SEO-сигналов у этого проекта. · shared-host: DR/AR смотри осторожно."
   },
   "requested_url": "https://analyseur-de-compatibilite-materiaux.onrender.com",
-  "updated": "2026-05-11T19:40:24.795336+00:00",
-  "open_links_republished_at": "2026-05-11T19:40:24.795357+00:00"
+  "updated": "2026-05-11T19:45:32.298188+00:00",
+  "open_links_republished_at": "2026-05-11T19:45:32.298217+00:00"
 }
